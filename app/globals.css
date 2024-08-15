@@ -2,32 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.app-container {
+  display: flex;
+  margin: 0 auto;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.customer-list {
+  width: 25%;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.customer-card {
+  padding: 10px;
+  cursor: pointer;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.customer-card.selected {
+  background-color: #d6d6d6;
+  border-right: 1px solid black;
+}
+
+.customer-details {
+  background-color: #f0f0f0;
+  width: 75%;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  
+}
+.consumer-heading{
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.consumer-title{
+  width: 70%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+  border-radius: 14px; /* Optional: Add border radius for a smoother look */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition */
 }
