@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Customer Details Portal
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project is a single-page application developed using React and TypeScript. It provides a customer details portal where users can view a list of customers and their details. The portal features a dynamic layout with a customer list on the left and detailed information on the right. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Customer List**: 
+   - Displays a list of customers on the left side.
+   - Each customer card shows the customer's name and title.
+   - The list can handle up to 1000 entries.
+   - The selected customer card is highlighted.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Customer Details**:
+   - Shows detailed information for the selected customer on the right side.
+   - Includes the customer's name, title, address, and a 3x3 grid of 9 photos.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Dynamic Photo Grid**:
+   - The 3x3 photo grid updates every 10 seconds with new images fetched from a public API.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **React**: For building the user interface.
+- **TypeScript**: For static typing and improved developer experience.
+- **HTML & CSS**: For layout and styling.
+- **Axios**: For making HTTP requests to fetch photos from an API.
